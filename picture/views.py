@@ -20,13 +20,13 @@ def location(request, location):
 
 def search(request):
     locations = Location.get_locations()
-    category = Category.objects.all()
+    category1 = Category.objects.all()
     if 'searchimage' in request.GET and request.GET["searchimage"]:
         category = request.GET.get("searchimage")
         images = Image.search_by_category(category)
-        return render(request, 'search.html', {"images":images, 'locations': locations, 'category':category})
+        return render(request, 'search.html', {"images":images, 'locations': locations, 'category1':category1})
     else:
-        return render(request, 'search.html', {'locations': locations,'category':category})
+        return render(request, 'search.html', {'locations': locations,'category1':category1})
 
 def details(request, pk):
     try:
