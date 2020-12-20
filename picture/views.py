@@ -24,11 +24,9 @@ def search(request):
     if 'searchimage' in request.GET and request.GET["searchimage"]:
         category = request.GET.get("searchimage")
         images = Image.search_by_category(category)
-        message = f"{category}"
-        return render(request, 'search.html', {"message": message, "images":images,  'locations': locations, 'category':category})
+        return render(request, 'search.html', {"images":images, 'locations': locations, 'category':category})
     else:
-        message = "No result"
-        return render(request, 'search.html', {"message": message, 'locations': locations,'category':category})
+        return render(request, 'search.html', {'locations': locations,'category':category})
 
 def details(request, pk):
     try:

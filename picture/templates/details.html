@@ -2,21 +2,25 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container m-5">
+  <div class="row justify-content-center">
 <div class="card border-info mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="{{image.image.url}}" alt="book" style="width:250px; ">
     </div>
+
     <div class="col-md-8">
       <div class="card-body">
           <h3 class="card-title" style="padding-left: 80px;"><strong>{{image.name}}</strong></h3>
           <p class="card-text" style="padding-left: 80px;">{{image.description}}</p>
-        <p class="card-text" style="padding-left: 80px;"><small class="text-muted">Last updated 3 mins ago</small></p>
-        <a style="background-color: #2A9D8F; margin-left: 80px;" class="btn btn-info" href="{{book.webReaderLink}}">Read more</a>
+          <p class="card-text" style="padding-left: 80px;">__{{image.author}}</p>
+        <p class="card-text" style="padding-left: 80px;"><small class="text-muted">{{image.date}}</small></p>
+        <a style="background-color: #DA95AA; margin-left: 80px;" class="btn btn-info" href="{{book.webReaderLink}}">Read more</a>
       </div>
     </div>
   </div>
+</div>
 </div>
 </div>
 
