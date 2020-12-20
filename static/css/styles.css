@@ -1,0 +1,14 @@
+.card-img-top {
+    width: 100%;
+    height: 7vw;
+    object-fit: cover;
+}
+nav{
+    background-color: #B33F62;
+}
+.locations{
+    background-color: #DA95AA;
+}
+button{
+    background-color: #DA95AA;
+}

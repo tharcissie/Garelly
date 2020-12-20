@@ -10,7 +10,7 @@ class EditorTestClass(TestCase):
     def setUp(self):
         self.location = Location.objects.create(name='Kigali')
         self.category = Category.objects.create(name='car')
-        self.car= Image(name = 'car', description ='Muriuki', location = self.location, category = self.category)
+        self.car= Image(name = 'car', link = 'https', description ='Muriuki', location = self.location, category = self.category)
 
     # Testing  instance
     def test_instance(self):
