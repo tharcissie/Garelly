@@ -18,7 +18,7 @@
             <hr>
             <div class="row">
                 {% for image in images %}
-                <div class="col-3 m-md-2">
+                <div class="col-md-3 m-md-2">
                     <div class="card">
                         <a href="{% url 'details' image.pk %}"><img class="card-img-top" src="{{image.image.url}}"
                                 alt="Card image cap"></a>
